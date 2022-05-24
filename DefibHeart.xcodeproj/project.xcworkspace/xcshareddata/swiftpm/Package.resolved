@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "shapeup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ryanlintott/ShapeUp",
+      "state" : {
+        "revision" : "9b1b09e21deeba9fdaeae49dcb507077b355bd5b",
+        "version" : "0.3.3"
+      }
+    }
+  ],
+  "version" : 2
+}

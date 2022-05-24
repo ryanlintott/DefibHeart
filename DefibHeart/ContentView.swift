@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isOn: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        DefibHeart(isOn: isOn, size: 100)
+            .onTapGesture {
+                isOn.toggle()
+            }
     }
 }
 

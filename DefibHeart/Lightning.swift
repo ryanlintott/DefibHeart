@@ -15,7 +15,7 @@ struct Lightning: CornerShape {
     let boltThickness: CGFloat
     
     let endHeight = 0.7
-    let spikeHeight = 0.4
+    let spikeHeight = 0.3
     let spikeHalfWidth = 0.2
     let pointOffset = 0.1
     
