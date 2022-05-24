@@ -11,6 +11,13 @@
 		CF021C5C283C768800C2D596 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C5B283C768800C2D596 /* ContentView.swift */; };
 		CF021C5E283C768800C2D596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF021C5D283C768800C2D596 /* Assets.xcassets */; };
 		CF021C61283C768800C2D596 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF021C60283C768800C2D596 /* Preview Assets.xcassets */; };
+		CF021C69283C76CA00C2D596 /* ShapeUp in Frameworks */ = {isa = PBXBuildFile; productRef = CF021C68283C76CA00C2D596 /* ShapeUp */; };
+		CF021C6B283C76DA00C2D596 /* Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C6A283C76DA00C2D596 /* Heart.swift */; };
+		CF021C6D283C7D0400C2D596 /* DefibPaddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C6C283C7D0400C2D596 /* DefibPaddle.swift */; };
+		CF021C6F283C816700C2D596 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C6E283C816700C2D596 /* Color+Extension.swift */; };
+		CF021C71283C855700C2D596 /* DefibHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C70283C855700C2D596 /* DefibHeart.swift */; };
+		CF021C73283D1C5B00C2D596 /* Lightning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C72283D1C5B00C2D596 /* Lightning.swift */; };
+		CF021C79283D4C2000C2D596 /* BeatingHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF021C78283D4C2000C2D596 /* BeatingHeart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,12 @@
 		CF021C5B283C768800C2D596 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF021C5D283C768800C2D596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF021C60283C768800C2D596 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF021C6A283C76DA00C2D596 /* Heart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
+		CF021C6C283C7D0400C2D596 /* DefibPaddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefibPaddle.swift; sourceTree = "<group>"; };
+		CF021C6E283C816700C2D596 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		CF021C70283C855700C2D596 /* DefibHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefibHeart.swift; sourceTree = "<group>"; };
+		CF021C72283D1C5B00C2D596 /* Lightning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lightning.swift; sourceTree = "<group>"; };
+		CF021C78283D4C2000C2D596 /* BeatingHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatingHeart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF021C69283C76CA00C2D596 /* ShapeUp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +67,12 @@
 			children = (
 				CF021C59283C768800C2D596 /* DefibHeartApp.swift */,
 				CF021C5B283C768800C2D596 /* ContentView.swift */,
+				CF021C70283C855700C2D596 /* DefibHeart.swift */,
+				CF021C6A283C76DA00C2D596 /* Heart.swift */,
+				CF021C78283D4C2000C2D596 /* BeatingHeart.swift */,
+				CF021C6C283C7D0400C2D596 /* DefibPaddle.swift */,
+				CF021C72283D1C5B00C2D596 /* Lightning.swift */,
+				CF021C6E283C816700C2D596 /* Color+Extension.swift */,
 				CF021C5D283C768800C2D596 /* Assets.xcassets */,
 				CF021C5F283C768800C2D596 /* Preview Content */,
 			);
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = DefibHeart;
+			packageProductDependencies = (
+				CF021C68283C76CA00C2D596 /* ShapeUp */,
+			);
 			productName = DefibHeart;
 			productReference = CF021C56283C768800C2D596 /* DefibHeart.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = CF021C4D283C768800C2D596;
+			packageReferences = (
+				CF021C67283C76CA00C2D596 /* XCRemoteSwiftPackageReference "ShapeUp" */,
+			);
 			productRefGroup = CF021C57283C768800C2D596 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF021C6D283C7D0400C2D596 /* DefibPaddle.swift in Sources */,
+				CF021C6F283C816700C2D596 /* Color+Extension.swift in Sources */,
+				CF021C6B283C76DA00C2D596 /* Heart.swift in Sources */,
+				CF021C79283D4C2000C2D596 /* BeatingHeart.swift in Sources */,
+				CF021C71283C855700C2D596 /* DefibHeart.swift in Sources */,
 				CF021C5C283C768800C2D596 /* ContentView.swift in Sources */,
 				CF021C5A283C768800C2D596 /* DefibHeartApp.swift in Sources */,
+				CF021C73283D1C5B00C2D596 /* Lightning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF021C67283C76CA00C2D596 /* XCRemoteSwiftPackageReference "ShapeUp" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ryanlintott/ShapeUp";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF021C68283C76CA00C2D596 /* ShapeUp */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF021C67283C76CA00C2D596 /* XCRemoteSwiftPackageReference "ShapeUp" */;
+			productName = ShapeUp;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF021C4E283C768800C2D596 /* Project object */;
 }
