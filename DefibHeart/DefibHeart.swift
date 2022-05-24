@@ -89,16 +89,6 @@ struct DefibHeart: View {
     
     @State private var keyframe: Keyframe = .start
     
-//    let separationAmount: CGFloat = 0
-//    let rotationAmount: CGFloat = 1
-//    let paddleOffset: CGFloat = 0.54
-//
-//    var maxSeparation: CGFloat {
-//        size * 0.7
-//    }
-//
-//    let maxRotation: Angle = .degrees(-40)
-    
     func startAnimation() {
         for key in Keyframe.allCases.dropFirst() {
             print("Key: \(key) Duration: \(key.duration) Delay \(key.delay)")
@@ -128,6 +118,14 @@ struct DefibHeart: View {
         ], startPoint: .leading, endPoint: .trailing)
     }
     
+    var heart: some InsettableShape {
+        Heart(expandAmount: keyframe.rhythm == .regular ? 0.1 : 0)
+    }
+    
+    var heartbeat: Animation {
+        keyframe == .beating ? .easeInOut(duration: 0.5).delay(0.05).repeatForever().delay(keyframe.delay) : .default
+    }
+    
     var body: some View {
         ZStack {
             defibPaddle
@@ -136,13 +134,13 @@ struct DefibHeart: View {
                 .rotation3DEffect(.degrees(180), axis: (0, 1, 0))
             
             ZStack {
-                Heart(expandAmount: keyframe.rhythm == .regular ? 0.1 : 0)
-                        .fill(keyframe >= .zap ? Color.heartRed : Color.white)
+                heart
+                    .fill(keyframe >= .zap ? Color.heartRed : Color.white)
                     
-                Heart(expandAmount: keyframe.rhythm == .regular ? 0.1 : 0)
-                        .strokeBorder(Color.heartRed, lineWidth: 3)
+                heart
+                    .strokeBorder(lineWidth: 3)
             }
-            .animation(keyframe == .beating ? .easeInOut(duration: 0.5).delay(0.05).repeatForever().delay(keyframe.delay) : .default, value: keyframe.rhythm)
+            .animation(heartbeat, value: keyframe.rhythm)
             .foregroundColor(.heartRed)
             .aspectRatio(1, contentMode: .fit)
             .frame(width: size)
